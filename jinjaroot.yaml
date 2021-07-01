@@ -1,0 +1,8 @@
+projectName: shoestring
+projectVersion: 0.1.0
+projectAuthor: Soules and Magland
+projectAuthorEmail:
+projectDescription: Minimal Python project for a SciWare presentation demonstrating various VSCode features
+projectUrl: https://github.com/jsoules/shoestring
+projectBugTrackerUrl: https://github.com/jsoules/shoestring
+pythonPackageDir: .
