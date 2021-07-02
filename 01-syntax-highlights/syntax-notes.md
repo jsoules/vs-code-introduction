@@ -2,9 +2,9 @@
 
 * Purpose of this section is to demonstrate syntax highlighting
   * (in a couple different languages?)
-  * Honestly just showing live editing of a Markdown file *is* pretty compelling...
+  * Honestly, live editing of a Markdown file **is** pretty *compelling*.
 * Comparison of a text file, a python file, ......
-* Walk them around the VSCode UI a little bit
+* Walk around the VSCode UI a little bit
   * I have an overview of the file in my scroll bar...
   * I can see sections that I've saved, that are changed since last save,
   * Changed since commit, etc.
