@@ -1,4 +1,3 @@
-# With syntax highlighting
 import nltk
 import shoestring
 
