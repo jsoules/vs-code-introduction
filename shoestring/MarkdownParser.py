@@ -23,7 +23,7 @@ class MarkdownParser:
                     current_snippet = []
             else:
                 if current_snippet is None:
-                    raise Exception('Unexpected, current_snippet is None')
+                    raise Exception('current_language is set but current_snippet is None.')
                 if line.startswith("```"):
                     self._code_snippets.append(
                         CodeSnippet(
