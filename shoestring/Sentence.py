@@ -9,5 +9,7 @@ class Sentence:
     @property
     def words(self):
         return [w for w in self._words]
+    def remove_all_punctuation(self): # example of long method name
+        return Sentence(' '.join([str(w) for w in self.words]))
     def __str__(self):
         return self._text
