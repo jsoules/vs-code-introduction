@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/jsoules/anaconda3/envs/shoestring/bin/python"
+    "python.linting.enabled": true,
+    "python.analysis.typeCheckingMode": "basic"
 }
