@@ -1,0 +1,4 @@
+Because gifs can be large, the gifs are not hosted here, but
+are hosted on user-images.githubusercontent.com. This was
+accomplished by uploading the gifs as comments on an issue:
+https://github.com/jsoules/shoestring/issues/5

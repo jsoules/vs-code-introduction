@@ -1,0 +1,8 @@
+Note: install pylance extension and set the following for workspace settings. For convenience, this is already in the repo: `.vscode/settings.json`.
+
+```json
+{
+    "python.linting.enabled": true,
+    "python.analysis.typeCheckingMode": "basic"
+}
+```

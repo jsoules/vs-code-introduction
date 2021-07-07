@@ -1,4 +1,6 @@
 {
     "python.linting.enabled": true,
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "cSpell.enabled": false,
+    "git.enabled": true
 }
