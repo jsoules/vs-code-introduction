@@ -4,7 +4,7 @@
 * With **syntax highlighting**, the source code is *even more* readable
 * Easily identify syntax errors while typing. For example, try removing the space after the bullet.
 * The following vscode extensions are recommended
-  * yzhang.markdow
+  * yzhang.markdown-all-in-one
   * bierner.markdown-preview-github-styles
 * `inline code` is nicely highlighted
 

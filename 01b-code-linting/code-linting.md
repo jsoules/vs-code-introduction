@@ -56,8 +56,3 @@ Open files with errors or warnings are highlighted in red or yellow in the file 
 Errors and warnings for open files are also listed in the PROBLEMS tab in the terminal area.
 
 <img src="./assets/problems-tab.png" alt="problems-tab" style="max-width:600px;border:solid 1px gray" />
-
-
-
-
-
