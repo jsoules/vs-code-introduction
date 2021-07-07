@@ -7,7 +7,8 @@ def example1():
         print(f'word {i}: {w}')
     print(s)
 
-    s2 = s.remove_() # use [tab] to complete to "remove_all_punctuation"
+    # start typing to complete to ".remove_all_punctuation"
+    s2 = s.rem()
     print(s2)
 
 if __name__ == '__main__':
