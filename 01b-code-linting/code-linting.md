@@ -1,10 +1,10 @@
 # Code linting
 
-A linter is used to find errors, warnings, or stylistic problems in source code before compilation or runtime. from When a linter is integrated with an 
+A linter is used to find errors, warnings, or stylistic problems in source code before compilation or runtime. When a linter is integrated with an IDE (such as vscode), this is all done in real time as you type, and the results of linting are shown in a variety of ways.
 
 The term "lint" comes from software used by Bell Labs starting in 1978 that found small defects in code, just like a dryer finds small pieces of lint in clothes ([see wikipedia article](https://en.wikipedia.org/wiki/Lint_(software))).
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Dryer_lint.jpg/800px-Dryer_lint.jpg" alt="dryer lint" style="width:300px;border:solid 1px gray" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Dryer_lint.jpg/800px-Dryer_lint.jpg" alt="dryer lint" style="width:200px;border:solid 1px gray" />
 
 ## Greyed out (dimmed) code warnings
 
