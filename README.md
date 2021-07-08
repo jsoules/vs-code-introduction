@@ -1,14 +1,13 @@
 # shoestring
 
-Minimal Python project for a SciWare presentation demonstrating various VS Code features, using a
-toy model that manipulates string tokens. This is organized according to the features being
-demonstrated, NOT standard package layout conventions.
+This is a minimal Python project intended as a reference for a Simons Foundation SciWare
+presentation demonstrating various VS Code features. The defined classes mainly manipulate
+string tokens (hence the name).
 
-* I think the base example probably does find and find-replace in strings, and handles
-concatenation or building paragraphs.
-  * We'll say up front that obviously you would use StringBuilder or other built-in
-    Python tools for these tasks, that's not the point of this demonstration
-* Need to find excuses to use conditionals & lots of syntax
+Every section has brief documentation about the features demonstrated:
 
-* Alternative example: something that computes probabilities on dice rolls, a la
-[AnyDice](https://anydice.com/)?
+1. [Overview and Syntax Highlighting](./01-syntax-highlights/syntax-highlights.md)
+2. [Code Linting](./02-code-linting/code-linting.md)
+3. [Code Completion Features](./03-code-completion/code-completion.md)
+4. [Code Navigation Tools](./04-code-navigation/navigation.md)
+5. [Code Refactoring Tools](./05-refactoring-tools/refactoring.md)
