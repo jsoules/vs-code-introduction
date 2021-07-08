@@ -32,11 +32,11 @@ color of the highest-severity problem in the file:
 * In the file explorer, the file's name will be highlighted.
 All of its parents will be highlighted the same way, too:
 
-![File explorer highlights](../01b-code-linting/assets/file-explorer.png)
+![File explorer highlights](../02-code-linting/assets/file-explorer.png)
 
   this lets you drill down to particular files with errors.
 
-In addition, with Github integration, the file name color shows whether
+In addition, with GitHub integration, the file name color shows whether
 the file is new, modified, or deleted since last commit.
 
 ## Mouseover hints

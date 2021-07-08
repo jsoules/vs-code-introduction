@@ -2,30 +2,33 @@
 
 The IDE is aware of basic programming concepts, like
 [scope](https://en.wikipedia.org/wiki/Scope_(computer_science)). This
-allows it to offer context-aware tools to help
-[refactor](https://en.wikipedia.org/wiki/Code_refactoring) your code--so
-you can confidently make significant edits without changing how the code works
-(unless you mean to do so).
+allows it to offer context-aware
+[tools to help refactor](https://code.visualstudio.com/docs/editor/refactoring) your code--so
+you can confidently [make significant edits](https://en.wikipedia.org/wiki/Code_refactoring)
+without changing how the code works (unless you mean to).
 
-Suppose you have a file like [Example 4](./assets/example4.py), which
-defines two functions relating to strings. While they are not long or complex,
-they are not documented at all, and the terse names for the functions
+Consider [this file defining two functions related to strings](./assets/example3.py).
+While these functions are not individually long or complex,
+they aren't commented or explained at all, and the terse names for the functions
 and variables are the opposite of
 [self-documenting](https://en.wikipedia.org/wiki/Self-documenting_code).
+There are also some less-than-ideal design choices--like functions that
+might return a useful value or might return `False`--but let's assume
+that we don't want to change the actual behavior, only
+improve the implementation.
 
-How can an IDE help you improve this code?
-
-(VS Code supports intelligent refactoring for Python with the `rope`
-extension.)
+How can an IDE help accomplish this?
 
 ## Extract a function
 
-Both the functions `letc()` and `findc()` start with the same code. This
-looks like it's doing parameter validation. Both functions confirm the
-parameters `a` and `s` are both strings, and that `a` is one character
-and `s` is not empty.
+The file defines two functions, `letc()` and `findc()`.
+They both start with the same code, which
+looks like it's doing parameter validation: it confirms the
+parameters `a` and `s` are strings, and that `a` is one character
+and `s` is not empty. The functions return `False` if any of those
+conditions aren't met.
 
-Rather than reimplement these checks many times, let's make them a separate
+Rather than reimplement these checks many times, let's make a separate
 function with a clear name that can be called by both `letc()` and `findc()`.
 
 To do this, we highlight lines 2 through 10, and note the little light bulb
@@ -39,20 +42,20 @@ text with a call to that function:
 ![Method extraction step 2](./assets/renamed-extracted.png)
 
 After updating `findc()` so that it also calls `check_parameters()`,
-we get something like [this revised example](./assets/example4b-extract.py):
+we get something like [this revised example](./assets/example3b-extract.py):
 
 ![A function has been extracted](./assets/extracted.png)
 
 ## Scope-aware renaming
 
-After running the script, it seems that `letc()` counts the number of times
+From running the script, it seems that `letc()` counts the number of times
 a letter appears in a string, and `findc()` gives the indexes where it appears.
-`a` is the character being searched for and `s` is the string to look in.
+The parameter `a` is the character being searched for and `s` is the string to search in.
 Renaming everything will make this a lot clearer. But we don't want to change
 every occurrence of `a` or `s`--like the letter 'a' when it's being used as
 a parameter in the `__main__` section!
 
-Fortunately, the IDE is aware of variable scope, and can rename symbols
+Fortunately, the IDE is aware of the meaning of every symbol, and can rename them
 intelligently.
 
 ### Variables
@@ -87,7 +90,7 @@ After renaming:
 ![After renaming a function](./assets/function-rename-post.png)
 
 Doing this a few more times will yield
-[code that is much clearer](./assets/example4c-rename.py).
+[code that is much clearer](./assets/example3c-rename.py).
 
 ## Comment/uncomment section
 
