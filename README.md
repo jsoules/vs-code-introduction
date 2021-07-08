@@ -1,4 +1,4 @@
-# shoestring
+# Introduction to VS Code
 
 This is a minimal Python project intended as a reference for a Simons Foundation SciWare
 presentation demonstrating various VS Code features. The defined classes mainly manipulate
