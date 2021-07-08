@@ -18,7 +18,7 @@ you in ways that make your life much, much easier.
 
 IDEs like VS Code offer a lot of different functions. Here's a guide to their names:
 
-![Labels for the basic VS Code interface components](./assets/basic-VS Code-interface.png)
+![Labels for the basic VS Code interface components](./assets/basic-vscode-interface.png)
 
 (The "status bar" refers to the blue bar at the bottom of the window.)
 
