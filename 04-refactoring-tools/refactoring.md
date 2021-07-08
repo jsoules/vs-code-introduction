@@ -4,7 +4,8 @@ The IDE is aware of basic programming concepts, like
 [scope](https://en.wikipedia.org/wiki/Scope_(computer_science)). This
 allows it to offer context-aware tools to help
 [refactor](https://en.wikipedia.org/wiki/Code_refactoring) your code--so
-you can confidently make significant edits without changing how it works.
+you can confidently make significant edits without changing how the code works
+(unless you mean to do so).
 
 Suppose you have a file like [Example 4](./assets/example4.py), which
 defines two functions relating to strings. While they are not long or complex,
@@ -14,16 +15,18 @@ and variables are the opposite of
 
 How can an IDE help you improve this code?
 
-(Note: in Python, the features discussed here require the `rope` plugin.)
+(VS Code supports intelligent refactoring for Python with the `rope`
+extension.)
 
 ## Extract a function
 
-Both the functions `letc()` and `findc()` start with the same code, which
-looks like parameter validation: they check that parameters `a` and `s`
-are both strings, and that `a` is one character and `s` is not empty.
+Both the functions `letc()` and `findc()` start with the same code. This
+looks like it's doing parameter validation. Both functions confirm the
+parameters `a` and `s` are both strings, and that `a` is one character
+and `s` is not empty.
 
-Rather than repeat these checks, let's make them a separate
-function that can be called by both `letc()` and `findc()`.
+Rather than reimplement these checks many times, let's make them a separate
+function with a clear name that can be called by both `letc()` and `findc()`.
 
 To do this, we highlight lines 2 through 10, and note the little light bulb
 pop-up. Click this and select `Extract method`:
@@ -35,8 +38,10 @@ text with a call to that function:
 
 ![Method extraction step 2](./assets/renamed-extracted.png)
 
-After updating the second function so that it also calls the parameter
-checker, we get something like [example 4b](./assets/example4b-extract.py).
+After updating `findc()` so that it also calls `check_parameters()`,
+we get something like [this revised example](./assets/example4b-extract.py):
+
+![A function has been extracted](./assets/extracted.png)
 
 ## Scope-aware renaming
 
@@ -44,7 +49,8 @@ After running the script, it seems that `letc()` counts the number of times
 a letter appears in a string, and `findc()` gives the indexes where it appears.
 `a` is the character being searched for and `s` is the string to look in.
 Renaming everything will make this a lot clearer. But we don't want to change
-every occurrence of `a` or `s`.
+every occurrence of `a` or `s`--like the letter 'a' when it's being used as
+a parameter in the `__main__` section!
 
 Fortunately, the IDE is aware of variable scope, and can rename symbols
 intelligently.
@@ -62,7 +68,7 @@ name. The name is changed, only within this function:
 
 Note that the name is not changed where it isn't in scope.
 
-(Of course, if you do want to change every occurrence, conventional find-replace
+(Of course, if you *do* want to change every occurrence, conventional find-replace
 functionality is still available with `ctrl-h` or `cmd-h`.)
 
 ### Functions
@@ -71,7 +77,7 @@ Function names are also symbols, so the same process works for those:
 
 ![Before renaming a function](./assets/function-rename-pre.png)
 
-(Another nice text editor feature: VSCode helps you find matching symbols
+(Another nice text editor feature: VS Code helps you find matching symbols
 and repeated code by highlighting every occurrence of the selected text.)
 
 ![How to rename a function](./assets/function-rename-during.png)
@@ -80,8 +86,8 @@ After renaming:
 
 ![After renaming a function](./assets/function-rename-post.png)
 
-With a few more edits, the code becomes
-[much clearer](./assets/example4c-rename.py).
+Doing this a few more times will yield
+[code that is much clearer](./assets/example4c-rename.py).
 
 ## Comment/uncomment section
 
